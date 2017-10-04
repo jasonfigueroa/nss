@@ -27,7 +27,11 @@ let sentenceArray = sentence.split(" ");
 function addExcitement (theWordArray) {
     for(let i = 0; i < theWordArray.length; i++) {
         for(let j = 0; j <= i; j++) {
-            process.stdout.write(theWordArray[j] + " ");
+            if ((j + 1) % 3 === 0) {
+                process.stdout.write(theWordArray[j] + "! ");
+            } else {
+                process.stdout.write(theWordArray[j] + " ");
+            }            
         }
         console.log();
     }
