@@ -2,22 +2,6 @@ let sentence = "The walrus danced through the trees in the light of the moon";
 
 let nextSentence = "Hello there this is a test of this function to see if it's working";
 
-/***********************************************************/
-/* Log Array */
-/***********************************************************/
-
-// function consoleLogArray(arr) {
-//     for (let i = 0; i < arr.length; i++) {
-//         console.log("arr[" + i + "]: " + arr[i]);
-//     }
-// }
-
-// consoleLogArray(sentenceArray);
-
-/*****************/
-/* End Log Array */
-/*****************/
-
 /*
     The addExcitement function should be an impure function, and accept 
     the array as the sole argument. It should iterate over the array 
@@ -34,17 +18,20 @@ function addExcitement (nextSentence, mysterySymbol) {
     
     for (let i = 0; i < sentenceArray.length; i++) {
         
+        let output = "";
         let devSymbol = "";
         
         for (let j = 0; j <= i; j++) {            
             if ((j + 1) % 3 === 0) {
                 devSymbol += mysterySymbol;
-                process.stdout.write(sentenceArray[j] + devSymbol + " ");
+                output += sentenceArray[j] + devSymbol + " ";
+                // process.stdout.write(sentenceArray[j] + devSymbol + " ");
             } else {
-                process.stdout.write(sentenceArray[j] + " ");
+                output += sentenceArray[j] + " ";
+                // process.stdout.write(sentenceArray[j] + " ");
             }            
         }
-        console.log();
+        console.log(output);
     }
 }
 
